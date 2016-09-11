@@ -43,43 +43,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 doProcess();
-
+                doClick();
 
             }
         });
 
     }
 
-    private void doClick() {
-        String hasil2 = null;
-        String hasil4 = "Anda memilih jurusan  : ";
-        int startln = hasil4.length();
 
-        if (rpl.isChecked()) hasil4 += rpl.getText() + "(√) ";
-        if (tkj.isChecked()) hasil4 += tkj.getText() + "(√) ";
-        if (lain.isChecked()) hasil4 += lain.getText() + "(√)";
-
-
-        if (hasil4.length() == startln) hasil4 += "GAGAL  (X)";
-        tvhasil4.setText(hasil4);
-
-        if (rbP.isChecked()) {
-            hasil2 = rbP.getText().toString();
-        } else if (rbL.isChecked()) {
-            hasil2 = rbL.getText().toString();
-        }
-        if (hasil2 == null) {
-            tvhasil2.setText("Anda belum memilih gender");
-        } else {
-            tvhasil2.setText("Gender Anda : " + hasil2);
-        }
-        tvhasil3.setText("Anda berasal dari :" + spasal.getSelectedItem().toString());
-        if (rpl.isChecked()) hasil4 += rpl.getText() + "(√) ";
-        if (tkj.isChecked()) hasil4 += tkj.getText() + "(√) ";
-        if (lain.isChecked()) hasil4 += lain.getText() + "(√)";
-
-
-    }
 
 
     private boolean isValid() {
