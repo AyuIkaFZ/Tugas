@@ -17,15 +17,14 @@ public class MainActivity extends AppCompatActivity {
     RadioButton rbP, rbL;
     Spinner spasal;
     CheckBox rpl, tkj, lain;
-    TextView tvHasil, tvhasil2, tvhasil3;
+    TextView tvHasil, tvhasil2, tvhasil3, tvhasil4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        etNama = (EditText) findViewById(R.id.editTextNama);
-        etTahun = (EditText) findViewById(R.id.editTextTahun);
+
         rbP = (RadioButton) findViewById(R.id.radioButtonP);
         rbL = (RadioButton) findViewById(R.id.radioButtonL);
         spasal = (Spinner) findViewById(R.id.asal);
@@ -36,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         tvHasil = (TextView) findViewById(R.id.textViewHasil);
         tvhasil2 = (TextView) findViewById(R.id.textViewhasil2);
         tvhasil3 = (TextView) findViewById(R.id.textViewhasil3);
-
+        tvhasil4 = (TextView) findViewById(R.id.textViewhasil4);
 
         bOk.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,7 +51,16 @@ public class MainActivity extends AppCompatActivity {
 
     private void doClick() {
         String hasil2 = null;
+        String hasil4 = "Anda memilih jurusan  : ";
+        int startln = hasil4.length();
 
+        if (rpl.isChecked()) hasil4 += rpl.getText() + "(√) ";
+        if (tkj.isChecked()) hasil4 += tkj.getText() + "(√) ";
+        if (lain.isChecked()) hasil4 += lain.getText() + "(√)";
+
+
+        if (hasil4.length() == startln) hasil4 += "GAGAL  (X)";
+        tvhasil4.setText(hasil4);
 
         if (rbP.isChecked()) {
             hasil2 = rbP.getText().toString();
@@ -105,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
             String nama = etNama.getText().toString();
             int tahun = Integer.parseInt(etTahun.getText().toString());
             int usia = 2016 - tahun;
-            tvHasil.setText("Nama Anda : " + nama + "berusia" + usia + "tahun");
+            tvHasil.setText("Nama Anda : " + nama + "\n\n Berusia" + usia + "tahun");
         }
     }
 
