@@ -51,34 +51,37 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    private void doClick() {
+        String hasil2 = null;
+        String hasil4 = "Anda memilih jurusan  : ";
+        int startln = hasil4.length();
+
+        if (rpl.isChecked()) hasil4 += rpl.getText() + "(√) ";
+        if (tkj.isChecked()) hasil4 += tkj.getText() + "(√) ";
+        if (lain.isChecked()) hasil4 += lain.getText() + "(√)";
 
 
-    private boolean isValid() {
-        boolean valid = true;
+        if (hasil4.length() == startln) hasil4 += "GAGAL  (X)";
+        tvhasil4.setText(hasil4);
 
-        String nama = etNama.getText().toString();
-        String tahun = etTahun.getText().toString();
-
-        if (nama.isEmpty()) {
-            etNama.setError("Nama belum diisi");
-            valid = false;
-        } else if (nama.length() < 3) {
-            etNama.setError("Nama minimal 3 karakter");
-            valid = false;
-        } else {
-            etNama.setError(null);
+        if (rbP.isChecked()) {
+            hasil2 = rbP.getText().toString();
+        } else if (rbL.isChecked()) {
+            hasil2 = rbL.getText().toString();
         }
-        if (tahun.isEmpty()) {
-            etTahun.setError("Tahun Kelahiran Belum diisi");
-            valid = false;
-        } else if (tahun.length() != 4) {
-            etTahun.setError("Format tahun bukan yyyy");
-            valid = false;
+        if (hasil2 == null) {
+            tvhasil2.setText("Anda belum memilih gender");
         } else {
-            etTahun.setError(null);
+            tvhasil2.setText("Gender Anda : " + hasil2);
         }
-        return valid;
+        tvhasil3.setText("Anda berasal dari :" + spasal.getSelectedItem().toString());
+        if (rpl.isChecked()) hasil4 += rpl.getText() + "(√) ";
+        if (tkj.isChecked()) hasil4 += tkj.getText() + "(√) ";
+        if (lain.isChecked()) hasil4 += lain.getText() + "(√)";
+
+
     }
+
 
     private void doProcess() {
         if (isValid()) {
