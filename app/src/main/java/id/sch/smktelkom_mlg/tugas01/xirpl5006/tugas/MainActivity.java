@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-
+                doProcess();
                 doClick();
 
             }
@@ -107,15 +107,6 @@ public class MainActivity extends AppCompatActivity {
             etTahun.setError(null);
         }
         return valid;
-    }
-
-    private void doProcess() {
-        if (isValid()) {
-            String nama = etNama.getText().toString();
-            int tahun = Integer.parseInt(etTahun.getText().toString());
-            int usia = 2016 - tahun;
-            tvHasil.setText("Nama Anda : " + nama + "\n\n Berusia" + usia + "tahun");
-        }
     }
 
 
