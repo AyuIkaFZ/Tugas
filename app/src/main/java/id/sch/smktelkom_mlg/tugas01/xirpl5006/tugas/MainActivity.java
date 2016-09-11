@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     RadioButton rbP, rbL;
     Spinner spasal;
     CheckBox rpl, tkj, lain;
-    TextView tvHasil, tvhasil2, tvhasil3, tvhasil4;
+    TextView tvHasil, tvhasil2, tvhasil3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,8 +35,8 @@ public class MainActivity extends AppCompatActivity {
         bOk = (Button) findViewById(R.id.button);
         tvHasil = (TextView) findViewById(R.id.textViewHasil);
         tvhasil2 = (TextView) findViewById(R.id.textViewhasil2);
-        tvhasil3 = findViewById(R.id.textViewhasil3);
-        tvhasil4
+        tvhasil3 = (TextView) findViewById(R.id.textViewhasil3);
+
 
         bOk.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,15 +52,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void doClick() {
         String hasil2 = null;
-        String hasil4 = null;
-        int startln = hasil4.length();
 
-        if (rpl.isChecked()) hasil4 += rpl.getText() + "(√) ";
-        if (tkj.isChecked()) hasil4 += tkj.getText() + "(√) ";
-        if (lain.isChecked()) hasil4 += lain.getText() + "(√)";
-
-        if (hasil4.length() == startln) hasil4 += "GAGAL  (X)";
-        tvhasil4.setText(hasil4);
 
         if (rbP.isChecked()) {
             hasil2 = rbP.getText().toString();
@@ -73,8 +65,13 @@ public class MainActivity extends AppCompatActivity {
             tvhasil2.setText("Gender Anda : " + hasil2);
         }
         tvhasil3.setText("Anda berasal dari :" + spasal.getSelectedItem().toString());
+        if (rpl.isChecked()) hasil4 += rpl.getText() + "(√) ";
+        if (tkj.isChecked()) hasil4 += tkj.getText() + "(√) ";
+        if (lain.isChecked()) hasil4 += lain.getText() + "(√)";
+
 
     }
+
 
     private boolean isValid() {
         boolean valid = true;
