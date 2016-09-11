@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     Button bOk;
     RadioButton rbP, rbL;
     Spinner spasal;
-    TextView tvHasil, tvhasil2;
+    TextView tvHasil, tvhasil2, tvhasil3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         bOk = (Button) findViewById(R.id.button);
         tvHasil = (TextView) findViewById(R.id.textViewHasil);
         tvhasil2 = (TextView) findViewById(R.id.textViewhasil2);
+        tvhasil3 = findViewById(R.id.textViewhasil3);
 
 
         bOk.setOnClickListener(new View.OnClickListener() {
@@ -57,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         } else {
             tvhasil2.setText("Gender Anda : " + hasil2);
         }
-
+        tvhasil3.setText("Anda berasal dari :" + spasal.getSelectedItem().toString());
 
     }
 
