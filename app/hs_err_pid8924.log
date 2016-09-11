@@ -1,0 +1,126 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 480104 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (memory/allocation.inline.hpp:61), pid=8924, tid=0x0000000000001e50
+#
+# JRE version:  (8.0_101-b13) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.101-b13 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000002650800):  JavaThread "Unknown thread" [_thread_in_vm, id=7760, stack(0x0000000002500000,0x0000000002600000)]
+
+Stack: [0x0000000002500000,0x0000000002600000]
+[error occurred during error reporting (printing stack bounds), id 0xc0000005]
+
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x0000000002650800 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=7760, stack(0x0000000002500000,0x0000000002600000)]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff682420000 - 0x00007ff682457000 	C:\Program Files\Java\jdk1.8.0_101\bin\java.exe
+0x00007ffc94d60000 - 0x00007ffc94f0a000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007ffc94c20000 - 0x00007ffc94d5a000 	C:\Windows\system32\KERNEL32.DLL
+0x00007ffc921a0000 - 0x00007ffc922af000 	C:\Windows\system32\KERNELBASE.dll
+0x00007ffc90ce0000 - 0x00007ffc90d68000 	C:\Windows\system32\apphelp.dll
+0x00007ffc81ef0000 - 0x00007ffc81f3f000 	C:\Windows\AppPatch\AppPatch64\AcGenral.DLL
+0x00007ffc92930000 - 0x00007ffc929d7000 	C:\Windows\system32\msvcrt.dll
+0x00007ffc91f00000 - 0x00007ffc91f2b000 	C:\Windows\SYSTEM32\SspiCli.dll
+0x00007ffc94690000 - 0x00007ffc946e1000 	C:\Windows\system32\SHLWAPI.dll
+0x00007ffc94330000 - 0x00007ffc944a1000 	C:\Windows\system32\USER32.dll
+0x00007ffc94830000 - 0x00007ffc949a8000 	C:\Windows\system32\ole32.dll
+0x00007ffc92bb0000 - 0x00007ffc93fd0000 	C:\Windows\system32\SHELL32.dll
+0x00007ffc916e0000 - 0x00007ffc916fe000 	C:\Windows\SYSTEM32\USERENV.dll
+0x00007ffc94280000 - 0x00007ffc94325000 	C:\Windows\system32\ADVAPI32.dll
+0x00007ffc89d90000 - 0x00007ffc89dab000 	C:\Windows\SYSTEM32\MPR.dll
+0x00007ffc946f0000 - 0x00007ffc94826000 	C:\Windows\system32\RPCRT4.dll
+0x00007ffc928d0000 - 0x00007ffc92927000 	C:\Windows\SYSTEM32\sechost.dll
+0x00007ffc93fd0000 - 0x00007ffc941a6000 	C:\Windows\SYSTEM32\combase.dll
+0x00007ffc925e0000 - 0x00007ffc92724000 	C:\Windows\system32\GDI32.dll
+0x00007ffc920d0000 - 0x00007ffc920e4000 	C:\Windows\SYSTEM32\profapi.dll
+0x00007ffc90c40000 - 0x00007ffc90cdf000 	C:\Windows\SYSTEM32\SHCORE.dll
+0x00007ffc94210000 - 0x00007ffc94244000 	C:\Windows\system32\IMM32.DLL
+0x00007ffc92790000 - 0x00007ffc928c9000 	C:\Windows\system32\MSCTF.dll
+0x00007ffc8feb0000 - 0x00007ffc9010a000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.9600.17031_none_6242a4b3ecbb55a1\COMCTL32.dll
+0x0000000067c00000 - 0x0000000067cd2000 	C:\Program Files\Java\jdk1.8.0_101\jre\bin\msvcr100.dll
+0x0000000065f40000 - 0x00000000667da000 	C:\Program Files\Java\jdk1.8.0_101\jre\bin\server\jvm.dll
+0x00007ffc86530000 - 0x00007ffc86539000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x00007ffc90110000 - 0x00007ffc9012f000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007ffc90130000 - 0x00007ffc9013a000 	C:\Windows\SYSTEM32\VERSION.dll
+0x00007ffc92b80000 - 0x00007ffc92b87000 	C:\Windows\system32\PSAPI.DLL
+0x00007ffc94a70000 - 0x00007ffc94ac8000 	C:\Windows\system32\WS2_32.dll
+0x00007ffc8fc50000 - 0x00007ffc8fc7a000 	C:\Windows\SYSTEM32\WINMMBASE.dll
+0x00007ffc94270000 - 0x00007ffc94279000 	C:\Windows\system32\NSI.dll
+0x00007ffc92540000 - 0x00007ffc9258a000 	C:\Windows\SYSTEM32\cfgmgr32.dll
+0x00007ffc90f80000 - 0x00007ffc90fa6000 	C:\Windows\SYSTEM32\DEVOBJ.dll
+0x0000000067bf0000 - 0x0000000067bff000 	C:\Program Files\Java\jdk1.8.0_101\jre\bin\verify.dll
+0x0000000065f10000 - 0x0000000065f39000 	C:\Program Files\Java\jdk1.8.0_101\jre\bin\java.dll
+0x0000000065ef0000 - 0x0000000065f06000 	C:\Program Files\Java\jdk1.8.0_101\jre\bin\zip.dll
+
+VM Arguments:
+jvm_args: -Djava.awt.headless=true -Xmx1024M -Dfile.encoding=windows-1252 -Duser.country=US -Duser.language=en -Duser.variant 
+java_command: com.android.dx.command.Main --dex --force-jumbo --num-threads=4 --multi-dex --output C:\Users\ika\AndroidStudioProjects\Tugas\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_9 C:\Users\ika\AndroidStudioProjects\Tugas\app\build\intermediates\transforms\instantRunSlicer\debug\folders\1\5\slice_9
+java_class_path (initial): C:\Users\ika\AppData\Local\Android\sdk\build-tools\23.0.3\lib\dx.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=C:\Program Files\Java\jdk1.8.0_101\bin;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\
+USERNAME=ika
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 69 Stepping 1, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 8.1 , 64 bit Build 9600 (6.3.9600.17056)
+
+CPU:total 4 (2 cores per cpu, 2 threads per core) family 6 model 69 stepping 1, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2
+
+Memory: 4k page, physical 4074560k(145088k free), swap 7220288k(5956k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.101-b13) for windows-amd64 JRE (1.8.0_101-b13), built on Jun 22 2016 01:21:29 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Sat Sep 10 08:53:54 2016
+elapsed time: 0 seconds (0d 0h 0m 0s)
+
