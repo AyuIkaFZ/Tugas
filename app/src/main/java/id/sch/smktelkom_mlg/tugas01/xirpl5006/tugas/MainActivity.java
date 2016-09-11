@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     Button bOk;
     RadioButton rbP, rbL;
     Spinner spasal;
-    CheckBox rpl;
+    CheckBox rpl, tkj;
     TextView tvHasil, tvhasil2, tvhasil3;
 
     @Override
@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         rbL = (RadioButton) findViewById(R.id.radioButtonL);
         spasal = (Spinner) findViewById(R.id.asal);
         rpl = (CheckBox) findViewById(R.id.rpl);
+        tkj = (CheckBox) findViewById(R.id.tkj);
         bOk = (Button) findViewById(R.id.button);
         tvHasil = (TextView) findViewById(R.id.textViewHasil);
         tvhasil2 = (TextView) findViewById(R.id.textViewhasil2);
