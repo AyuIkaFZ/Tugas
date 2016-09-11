@@ -24,7 +24,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        etNama = (EditText) findViewById(R.id.editTextNama);
+        etTahun = (EditText) findViewById(R.id.editTextTahun);
         rbP = (RadioButton) findViewById(R.id.radioButtonP);
         rbL = (RadioButton) findViewById(R.id.radioButtonL);
         spasal = (Spinner) findViewById(R.id.asal);
@@ -41,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                doProcess();
+
                 doClick();
 
             }
