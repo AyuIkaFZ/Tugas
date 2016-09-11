@@ -16,8 +16,8 @@ public class MainActivity extends AppCompatActivity {
     Button bOk;
     RadioButton rbP, rbL;
     Spinner spasal;
-    CheckBox rpl, tkj;
-    TextView tvHasil, tvhasil2, tvhasil3;
+    CheckBox rpl, tkj, lain;
+    TextView tvHasil, tvhasil2, tvhasil3, tvhasil4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,11 +31,12 @@ public class MainActivity extends AppCompatActivity {
         spasal = (Spinner) findViewById(R.id.asal);
         rpl = (CheckBox) findViewById(R.id.rpl);
         tkj = (CheckBox) findViewById(R.id.tkj);
+        lain = (CheckBox) findViewById(R.id.lain);
         bOk = (Button) findViewById(R.id.button);
         tvHasil = (TextView) findViewById(R.id.textViewHasil);
         tvhasil2 = (TextView) findViewById(R.id.textViewhasil2);
         tvhasil3 = findViewById(R.id.textViewhasil3);
-
+        tvhasil4
 
         bOk.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,6 +52,15 @@ public class MainActivity extends AppCompatActivity {
 
     private void doClick() {
         String hasil2 = null;
+        String hasil4 = null;
+        int startln = hasil4.length();
+
+        if (rpl.isChecked()) hasil4 += rpl.getText() + "(√) ";
+        if (tkj.isChecked()) hasil4 += tkj.getText() + "(√) ";
+        if (lain.isChecked()) hasil4 += lain.getText() + "(√)";
+
+        if (hasil4.length() == startln) hasil4 += "GAGAL  (X)";
+        tvhasil4.setText(hasil4);
 
         if (rbP.isChecked()) {
             hasil2 = rbP.getText().toString();
