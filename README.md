@@ -1,3 +1,7 @@
+Identitas : Ayu Ika Fatimatus Zahro/XIRPL5/06 SMK Telkom Malang
+
+https://drive.google.com/drive/u/0/my-drive
+
 Project saya ini merupakan form pendaftaran untuk siswa. Didalam nya terdapat 7 Text View, 1 Image View, 2 Edit Text, 
 1 Radio Group dan 2 Radio Button, 1 Spinner, 3 Check Box, dan 1 Button. Disitu terdapat data calon siswa baru yang harus 
 diinputkan seperti nama, umur, jenis kelamin, asal daerah, jurusan yang dipilih. Saya juga menambahkan deteksi kesalahan 
